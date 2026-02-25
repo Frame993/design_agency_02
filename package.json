@@ -1,0 +1,16 @@
+{
+  "name": "forma-studio",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter web dev\" \"pnpm --filter api dev\"",
+    "build": "pnpm --filter types build && pnpm --filter web build && pnpm --filter api build",
+    "typecheck": "pnpm --filter types typecheck && pnpm --filter web typecheck && pnpm --filter api typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "@tailwindcss/oxide"]
+  }
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-black: #0d0d0d;
+  --color-white: #fafaf8;
+  --color-cream: #f5f0e8;
+  --color-accent: #c8f23a;
+  --color-gray-100: #f0ede8;
+  --color-gray-400: #9b9690;
+  --color-gray-600: #5c5955;
+  --color-gray-900: #1a1917;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  overflow-x: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+textarea, input { font-family: inherit; }
+
+/* ─── Marquee ─── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 28s linear infinite; }
+
+/* ─── Scroll indicator ─── */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.animate-scroll-pulse { animation: scrollPulse 2s ease-in-out infinite; }
+
+/* ─── Availability dot ─── */
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(62,207,76,0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(62,207,76,0.1); }
+}
+.animate-pulse-dot { animation: pulseDot 2.5s ease-in-out infinite; }
+
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
