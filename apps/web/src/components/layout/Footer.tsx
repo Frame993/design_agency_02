@@ -1,6 +1,7 @@
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white px-16 py-16">
+      <div className="max-w-[1400px] mx-auto">
       <div className="flex justify-between items-start gap-12 pb-12 border-b border-white/8 mb-8 flex-wrap">
         <div>
           <span className="block text-[1.1rem] font-bold tracking-[0.2em] mb-3">FORMA</span>
@@ -24,6 +25,7 @@ export function Footer() {
       <div className="flex justify-between text-xs text-white/30 flex-wrap gap-2">
         <span>© 2025 Forma Studio. All rights reserved.</span>
         <span>Privacy Policy</span>
+      </div>
       </div>
     </footer>
   )

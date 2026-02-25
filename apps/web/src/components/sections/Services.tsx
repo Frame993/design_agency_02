@@ -4,26 +4,26 @@ const services = [
   {
     num: '01',
     title: 'Brand Identity',
-    desc: 'Strategy, naming, visual identity, and brand guidelines that give your company a distinctive, lasting presence in a crowded world.',
-    tags: ['Naming', 'Visual Identity', 'Guidelines', 'Strategy'],
+    desc: 'Logos, brand systems, and guidelines that give your company a distinctive, lasting presence — from the first mark to a complete visual language.',
+    tags: ['Logos', 'Branding', 'Brand Guides'],
   },
   {
     num: '02',
     title: 'Digital Design',
-    desc: 'Websites, apps, and digital products designed with precision — from early wireframes to polished, responsive interfaces ready to ship.',
-    tags: ['Web Design', 'UI/UX', 'Prototyping', 'Responsive'],
+    desc: 'Websites, mobile apps, and digital products designed with precision — from early wireframes to polished, responsive interfaces ready to ship.',
+    tags: ['Web Design', 'UI/UX Design', 'Mobile Apps'],
   },
   {
     num: '03',
-    title: 'Motion & Film',
-    desc: 'Brand films, UI animations, and motion identities that bring your brand to life — from social content to broadcast-ready campaigns.',
-    tags: ['Brand Film', 'Animation', 'Motion ID', 'Social'],
+    title: 'Print & Packaging',
+    desc: 'Tactile design that makes an impression — packaging that sells on shelf, and print collateral that commands attention in the physical world.',
+    tags: ['Print Design', 'Packaging'],
   },
   {
     num: '04',
-    title: 'Design Systems',
-    desc: 'Scalable component libraries, tokens, and documentation that keep your product perfectly consistent as your team and product grow.',
-    tags: ['Components', 'Tokens', 'Docs', 'Figma'],
+    title: 'Marketing Design',
+    desc: 'Creative assets that perform — email campaigns, display ads, and social media content designed to convert and keep your brand consistent at every touchpoint.',
+    tags: ['Email', 'Display Ads', 'Social Media'],
   },
 ]
 
@@ -32,7 +32,7 @@ export function Services() {
 
   return (
     <section className="bg-black text-white py-32 px-16" id="services" ref={ref}>
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-20 items-start">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-20 items-start">
         {/* Left — sticky */}
         <div className="lg:sticky lg:top-[calc(72px+2rem)]">
           <span className="block text-xs font-semibold tracking-[0.12em] uppercase text-accent mb-5">What we do</span>

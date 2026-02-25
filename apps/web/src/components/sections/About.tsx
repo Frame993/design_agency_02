@@ -20,7 +20,7 @@ export function About() {
   return (
     <section className="py-32 px-16 bg-cream" id="about" ref={ref}>
       {/* Top: intro + text */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-32 max-w-[1320px] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-32 max-w-[1400px] mx-auto">
         <div className="reveal">
           <span className="block text-xs font-semibold tracking-[0.12em] uppercase text-gray-600 mb-5">About Forma</span>
           <h2 className="font-display font-bold" style={{ fontSize: 'clamp(2.2rem,4vw,3.5rem)', lineHeight: 1.1 }}>
@@ -41,20 +41,20 @@ export function About() {
       </div>
 
       {/* Stats bar */}
-      <div className="max-w-[1320px] mx-auto flex items-center py-12 border-t border-b border-black/10 mb-32 flex-wrap gap-6">
+      <div className="max-w-[1400px] mx-auto flex items-center py-12 border-t border-b border-black/10 mb-32 flex-wrap gap-6">
         {stats.map((s, i) => (
           <div key={s.label} className="reveal flex items-center gap-0 flex-1 min-w-[120px]">
             {i > 0 && <div className="w-px h-15 bg-black/12 mr-8 hidden sm:block" />}
             <div className="text-center flex-1">
               <span className="block font-display font-bold mb-1" style={{ fontSize: 'clamp(2.5rem,4vw,4rem)', lineHeight: 1 }}>{s.num}</span>
-              <span className="text-[0.75rem] font-medium tracking-[0.1em] uppercase text-gray-600">{s.label}</span>
+              <span className="text-[0.75rem] font-medium tracking-widest uppercase text-gray-600">{s.label}</span>
             </div>
           </div>
         ))}
       </div>
 
       {/* Process */}
-      <div className="max-w-[1320px] mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <span className="block text-xs font-semibold tracking-[0.12em] uppercase text-gray-600 mb-8">How we work</span>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {steps.map((s, i) => (

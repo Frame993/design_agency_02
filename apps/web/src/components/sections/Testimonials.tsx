@@ -5,7 +5,7 @@ export function Testimonials() {
 
   return (
     <section className="bg-black text-white py-32 px-16" ref={ref}>
-      <div className="max-w-[1320px] mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
           <span className="text-xs font-semibold tracking-[0.12em] uppercase text-accent">Client love</span>
@@ -35,7 +35,7 @@ export function Testimonials() {
               <strong className="block text-[0.95rem] text-white font-semibold">Sarah Chen</strong>
               <span className="text-sm text-white/45">Co-founder, Apex Capital</span>
             </div>
-            <span className="ml-auto text-[0.7rem] font-semibold tracking-[0.1em] uppercase text-accent border border-accent/30 rounded-full px-3 py-1 hidden sm:block">
+            <span className="ml-auto text-[0.7rem] font-semibold tracking-widest uppercase text-accent border border-accent/30 rounded-full px-3 py-1 hidden sm:block">
               Brand Identity + Web
             </span>
           </footer>

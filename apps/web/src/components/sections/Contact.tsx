@@ -43,7 +43,7 @@ export function Contact() {
 
   return (
     <section className="bg-cream py-32 px-16" id="contact">
-      <div className="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-24 items-start">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-24 items-start">
 
         {/* Left — info */}
         <div>
