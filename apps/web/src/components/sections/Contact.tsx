@@ -1,11 +1,13 @@
 import { useState, type FormEvent } from 'react'
 import type { ContactFormPayload, BudgetRange } from '@forma/types'
+import { useT } from '../../i18n'
 
 type FormState = 'idle' | 'loading' | 'success' | 'error'
 
-const budgets: BudgetRange[] = ['$10–25k', '$25–50k', '$50–100k', '$100k+']
-
 export function Contact() {
+  const { t, data } = useT()
+  const { form, budgets, info, next_steps } = data.contact
+
   const [budget, setBudget] = useState<BudgetRange | ''>('')
   const [state, setState] = useState<FormState>('idle')
   const [errorMsg, setErrorMsg] = useState('')
@@ -30,8 +32,8 @@ export function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
-      const data = await res.json()
-      if (!res.ok || !data.success) throw new Error(data.error ?? 'Failed to send')
+      const resData = await res.json()
+      if (!res.ok || !resData.success) throw new Error(resData.error ?? 'Failed to send')
       setState('success')
       ;(e.target as HTMLFormElement).reset()
       setBudget('')
@@ -47,22 +49,18 @@ export function Contact() {
 
         {/* Left — info */}
         <div>
-          <div className="text-xs font-semibold tracking-[0.14em] uppercase text-gray-600 mb-4">Ready to start?</div>
+          <div className="text-xs font-semibold tracking-[0.14em] uppercase text-gray-600 mb-4">{t('contact.label')}</div>
           <h2 className="font-display font-bold leading-[1.08] mb-5" style={{ fontSize: 'clamp(2.2rem,4vw,3.5rem)' }}>
-            Let's build something extraordinary.
+            {t('contact.headline')}
           </h2>
           <p className="text-[0.95rem] text-gray-600 leading-[1.8] mb-10 max-w-[36ch]">
-            Tell us about your project and we'll respond within 24 hours with thoughts, not a template.
+            {t('contact.subtext')}
           </p>
 
           <div className="flex flex-col gap-4 mb-10 pb-10 border-b border-black/10">
-            {[
-              { label: 'Email', value: 'hello@forma.studio', href: 'mailto:hello@forma.studio' },
-              { label: 'Based in', value: 'London & Remote' },
-              { label: 'Availability', value: 'Open — Q3 2025' },
-            ].map((d) => (
+            {info.map((d) => (
               <div key={d.label} className="flex items-baseline gap-4">
-                <span className="text-[0.7rem] font-semibold tracking-[0.1em] uppercase text-gray-400 min-w-[88px]">{d.label}</span>
+                <span className="text-[0.7rem] font-semibold tracking-widest uppercase text-gray-400 min-w-[88px]">{d.label}</span>
                 {d.href
                   ? <a href={d.href} className="text-sm font-medium hover:underline">{d.value}</a>
                   : <span className="text-sm font-medium">{d.value}</span>
@@ -71,13 +69,9 @@ export function Contact() {
             ))}
           </div>
 
-          <span className="block text-[0.7rem] font-semibold tracking-[0.1em] uppercase text-gray-400 mb-4">What happens next</span>
+          <span className="block text-[0.7rem] font-semibold tracking-widest uppercase text-gray-400 mb-4">{t('contact.next_label')}</span>
           <ol className="flex flex-col gap-2.5 list-none">
-            {[
-              'We review your brief & scope the project',
-              'A 30-min intro call to align on vision',
-              'Tailored proposal within 3 business days',
-            ].map((step, i) => (
+            {next_steps.map((step, i) => (
               <li key={i} className="flex items-baseline gap-3 text-sm text-gray-600">
                 <span className="text-[0.65rem] font-bold tracking-[0.08em] text-gray-400 shrink-0">
                   {String(i + 1).padStart(2, '0')}
@@ -91,19 +85,19 @@ export function Contact() {
         {/* Right — form card */}
         <div className="bg-white border border-black/8 rounded-xl p-10">
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            <Field label="Your name" name="name" type="text" placeholder="Jane Smith" required />
-            <Field label="Email address" name="email" type="email" placeholder="jane@company.com" required />
-            <Field label="Company / Project" name="company" type="text" placeholder="Acme Corp" />
+            <Field label={form.name_label} name="name" type="text" placeholder={form.name_placeholder} required />
+            <Field label={form.email_label} name="email" type="email" placeholder={form.email_placeholder} required />
+            <Field label={form.company_label} name="company" type="text" placeholder={form.company_placeholder} />
 
             {/* Budget */}
             <div className="flex flex-col gap-2">
-              <label className="text-[0.78rem] font-semibold tracking-[0.05em] text-gray-600">Budget range</label>
+              <label className="text-[0.78rem] font-semibold tracking-[0.05em] text-gray-600">{form.budget_label}</label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {budgets.map((b) => (
                   <button
                     key={b}
                     type="button"
-                    onClick={() => setBudget(budget === b ? '' : b)}
+                    onClick={() => setBudget(budget === b ? '' : b as BudgetRange)}
                     className={`text-center py-2.5 text-[0.78rem] font-semibold border-[1.5px] rounded transition-all ${
                       budget === b
                         ? 'bg-black text-white border-black'
@@ -119,14 +113,14 @@ export function Contact() {
             {/* Message */}
             <div className="flex flex-col gap-2">
               <label htmlFor="message" className="text-[0.78rem] font-semibold tracking-[0.05em] text-gray-600">
-                Tell us about your project
+                {form.message_label}
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 required
-                placeholder="Share some context — the problem you're solving, your timeline, and what success looks like..."
+                placeholder={form.message_placeholder}
                 className="w-full px-4 py-3 bg-gray-100 border border-transparent rounded text-sm text-black placeholder-gray-400 focus:outline-none focus:bg-white focus:border-black transition-all resize-y"
               />
             </div>
@@ -145,7 +139,7 @@ export function Contact() {
                   : 'bg-black text-white hover:bg-gray-900 hover:-translate-y-0.5 hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed'
               }`}
             >
-              {state === 'loading' ? 'Sending…' : state === 'success' ? 'Message sent ✓' : 'Send message →'}
+              {state === 'loading' ? form.submit_loading : state === 'success' ? form.submit_success : form.submit_idle}
             </button>
           </form>
         </div>

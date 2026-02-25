@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useT } from '../../i18n'
 
 export function Nav() {
+  const { t } = useT()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -11,9 +13,9 @@ export function Nav() {
   }, [])
 
   const links = [
-    { href: '#work', label: 'Work' },
-    { href: '#services', label: 'Services' },
-    { href: '#about', label: 'About' },
+    { href: '#work', label: t('nav.work') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#about', label: t('nav.about') },
   ]
 
   return (
@@ -22,7 +24,7 @@ export function Nav() {
         scrolled ? 'border-b border-black/8 bg-white/90' : 'bg-cream/90'
       }`}
     >
-      <a href="#" className="text-[1.1rem] font-bold tracking-[0.2em]">FORMA</a>
+      <a href="#" className="text-[1.1rem] font-bold tracking-[0.2em]">{t('nav.brand')}</a>
 
       {/* Desktop links */}
       <ul className="hidden md:flex items-center gap-8">
@@ -38,7 +40,7 @@ export function Nav() {
             href="#contact"
             className="text-sm font-semibold px-5 py-2 border-[1.5px] border-black rounded hover:bg-black hover:text-white transition-all"
           >
-            Start a project
+            {t('nav.cta')}
           </a>
         </li>
       </ul>
@@ -50,7 +52,7 @@ export function Nav() {
         onClick={() => setOpen(!open)}
       >
         <span className={`block w-[22px] h-[2px] bg-black rounded transition-all ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
-        <span className={`block w-[22px] h-[2px] bg-black rounded transition-all ${open ? '-rotate-45 -translate-y-[0px]' : ''}`} />
+        <span className={`block w-[22px] h-[2px] bg-black rounded transition-all ${open ? '-rotate-45 translate-y-0' : ''}`} />
       </button>
 
       {/* Mobile menu */}
@@ -62,7 +64,7 @@ export function Nav() {
             </a>
           ))}
           <a href="#contact" className="text-sm font-semibold" onClick={() => setOpen(false)}>
-            Start a project →
+            {t('nav.cta_mobile')}
           </a>
         </div>
       )}

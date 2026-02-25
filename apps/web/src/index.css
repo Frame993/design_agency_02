@@ -15,23 +15,25 @@
   --font-display: 'Playfair Display', Georgia, serif;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-white);
-  color: var(--color-black);
-  overflow-x: hidden;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    overflow-x: hidden;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  button { cursor: pointer; border: none; background: none; font-family: inherit; }
+  textarea, input { font-family: inherit; }
 }
-
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; margin: 0; padding: 0; }
-button { cursor: pointer; border: none; background: none; font-family: inherit; }
-textarea, input { font-family: inherit; }
 
 /* ─── Marquee ─── */
 @keyframes marquee {

@@ -1,19 +1,9 @@
-const items = [
-  "Web Design",
-  "Logos",
-  "Branding",
-  "UI/UX Design",
-  "Mobile Apps",
-  "Print Design",
-  "Email",
-  "Display Ads",
-  "Social Media",
-  "Packaging",
-  "Brand Guides",
-];
-const doubled = [...items, ...items];
+import { useT } from '../../i18n'
 
 export function Marquee() {
+  const { data } = useT()
+  const doubled = [...data.marquee.items, ...data.marquee.items]
+
   return (
     <div
       className="bg-black text-white overflow-hidden py-[1.1rem] whitespace-nowrap"
@@ -28,5 +18,5 @@ export function Marquee() {
         ))}
       </div>
     </div>
-  );
+  )
 }

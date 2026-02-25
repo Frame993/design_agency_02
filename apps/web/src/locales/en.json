@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "brand": "FORMA",
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "cta": "Start a project",
+    "cta_mobile": "Start a project →"
+  },
+  "hero": {
+    "badge": "Available for projects — Q3 2025",
+    "headline_1": "We craft",
+    "headline_em": "brands",
+    "headline_3": "experiences.",
+    "cta_primary": "View our work",
+    "cta_secondary": "Start a project →",
+    "tagline": "Brand strategy, digital design, and motion — for companies that refuse to blend in.",
+    "stats": [
+      { "num": "60+", "label": "Projects" },
+      { "num": "12", "label": "Awards" },
+      { "num": "8yr", "label": "Studio" }
+    ],
+    "scroll": "Scroll"
+  },
+  "marquee": {
+    "items": [
+      "Web Design",
+      "Logos",
+      "Branding",
+      "UI/UX Design",
+      "Mobile Apps",
+      "Print Design",
+      "Email",
+      "Display Ads",
+      "Social Media",
+      "Packaging",
+      "Brand Guides"
+    ]
+  },
+  "work": {
+    "label": "Selected work",
+    "headline_1": "Projects we're",
+    "headline_2": "proud of",
+    "cta": "View all projects",
+    "projects": [
+      { "client": "Apex Capital", "year": "2024", "tags": ["Brand", "Identity", "Web"] },
+      { "client": "Lune Skincare", "year": "2023", "tags": ["Packaging", "Campaign"] },
+      { "client": "Nori Finance", "year": "2024", "tags": ["UI/UX", "Design System"] },
+      { "client": "Pulse Audio", "year": "2023", "tags": ["Brand", "Motion", "Web"] }
+    ]
+  },
+  "services": {
+    "label": "What we do",
+    "headline_1": "Full-spectrum",
+    "headline_2": "creative",
+    "headline_3": "output.",
+    "subtext": "We partner with ambitious teams to craft brands, products, and experiences that shape culture.",
+    "cta": "Start a project →",
+    "items": [
+      {
+        "title": "Brand Identity",
+        "desc": "Logos, brand systems, and guidelines that give your company a distinctive, lasting presence — from the first mark to a complete visual language.",
+        "tags": ["Logos", "Branding", "Brand Guides"]
+      },
+      {
+        "title": "Digital Design",
+        "desc": "Websites, mobile apps, and digital products designed with precision — from early wireframes to polished, responsive interfaces ready to ship.",
+        "tags": ["Web Design", "UI/UX Design", "Mobile Apps"]
+      },
+      {
+        "title": "Print & Packaging",
+        "desc": "Tactile design that makes an impression — packaging that sells on shelf, and print collateral that commands attention in the physical world.",
+        "tags": ["Print Design", "Packaging"]
+      },
+      {
+        "title": "Marketing Design",
+        "desc": "Creative assets that perform — email campaigns, display ads, and social media content designed to convert and keep your brand consistent at every touchpoint.",
+        "tags": ["Email", "Display Ads", "Social Media"]
+      }
+    ]
+  },
+  "about": {
+    "label": "About Forma",
+    "headline_1": "A small studio",
+    "headline_2": "with outsized",
+    "headline_3": "ambition.",
+    "body_1": "We're a tight-knit team of designers, strategists, and creative technologists. We work with a select number of clients each year — which means you get our full attention, not a junior team.",
+    "body_2": "Founded in 2019, we've partnered with startups and established brands alike, always with the same goal: design that works as hard as the people behind it.",
+    "cta": "Work with us",
+    "stats": [
+      { "num": "60+", "label": "Projects delivered" },
+      { "num": "12", "label": "Awards won" },
+      { "num": "8yr", "label": "Studio experience" },
+      { "num": "100%", "label": "Client retention" }
+    ],
+    "process_label": "How we work",
+    "steps": [
+      {
+        "title": "Discovery",
+        "desc": "We start by listening. Deep research into your market, audience, and competitive landscape sets the strategic foundation."
+      },
+      {
+        "title": "Strategy",
+        "desc": "We define your positioning, voice, and visual direction — creating a clear creative brief before any design begins."
+      },
+      {
+        "title": "Design",
+        "desc": "Iterative design rounds with focused feedback. We move fast, but never at the expense of craft and precision."
+      },
+      {
+        "title": "Launch",
+        "desc": "Pixel-perfect handoffs, brand rollout support, and ongoing partnership beyond the initial project."
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "Client love",
+    "headline_1": "What our",
+    "headline_2": "clients say.",
+    "featured": {
+      "quote_before": "Forma didn't just redesign our brand — they helped us understand who we really are. The result was a",
+      "quote_em": "40% increase in qualified leads",
+      "quote_after": "within three months of launch.",
+      "initials": "SC",
+      "name": "Sarah Chen",
+      "role": "Co-founder, Apex Capital",
+      "tag": "Brand Identity + Web"
+    },
+    "items": [
+      {
+        "initials": "MR",
+        "quote": "\"Working with Forma felt like having a creative director embedded in our team. They challenged our assumptions and delivered something we couldn't have imagined alone.\"",
+        "name": "Marcus Reid",
+        "role": "CMO, Lune Skincare"
+      },
+      {
+        "initials": "PN",
+        "quote": "\"The design system they built has scaled to 200+ components and saved our eng team hundreds of hours. Exceptional craft and documentation throughout.\"",
+        "name": "Priya Nair",
+        "role": "Head of Product, Nori Finance"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Ready to start?",
+    "headline": "Let's build something extraordinary.",
+    "subtext": "Tell us about your project and we'll respond within 24 hours with thoughts, not a template.",
+    "info": [
+      { "label": "Email", "value": "hello@forma.studio", "href": "mailto:hello@forma.studio" },
+      { "label": "Based in", "value": "London & Remote", "href": "" },
+      { "label": "Availability", "value": "Open — Q3 2025", "href": "" }
+    ],
+    "next_label": "What happens next",
+    "next_steps": [
+      "We review your brief & scope the project",
+      "A 30-min intro call to align on vision",
+      "Tailored proposal within 3 business days"
+    ],
+    "budgets": ["$10–25k", "$25–50k", "$50–100k", "$100k+"],
+    "form": {
+      "name_label": "Your name",
+      "name_placeholder": "Jane Smith",
+      "email_label": "Email address",
+      "email_placeholder": "jane@company.com",
+      "company_label": "Company / Project",
+      "company_placeholder": "Acme Corp",
+      "budget_label": "Budget range",
+      "message_label": "Tell us about your project",
+      "message_placeholder": "Share some context — the problem you're solving, your timeline, and what success looks like...",
+      "submit_idle": "Send message →",
+      "submit_loading": "Sending…",
+      "submit_success": "Message sent ✓"
+    }
+  },
+  "footer": {
+    "brand": "FORMA",
+    "tagline": "Design that moves the world forward.",
+    "columns": [
+      {
+        "title": "Studio",
+        "links": [
+          { "label": "Work", "href": "#work" },
+          { "label": "Services", "href": "#services" },
+          { "label": "About", "href": "#about" }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          { "label": "Instagram", "href": "#" },
+          { "label": "LinkedIn", "href": "#" },
+          { "label": "Dribbble", "href": "#" }
+        ]
+      },
+      {
+        "title": "Contact",
+        "links": [
+          { "label": "hello@forma.studio", "href": "mailto:hello@forma.studio" },
+          { "label": "Start a project", "href": "#contact" }
+        ]
+      }
+    ],
+    "copyright": "© 2025 Forma Studio. All rights reserved.",
+    "privacy": "Privacy Policy"
+  }
+}
