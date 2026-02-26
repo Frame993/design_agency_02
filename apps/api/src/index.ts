@@ -6,9 +6,11 @@ import { contactRouter } from './routes/contact.js'
 const app = express()
 const PORT = process.env.PORT ?? 3001
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN ?? 'http://localhost:5173',
+    origin: isDev ? /^http:\/\/localhost:\d+$/ : process.env.ALLOWED_ORIGIN,
     methods: ['POST', 'GET', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
   })
