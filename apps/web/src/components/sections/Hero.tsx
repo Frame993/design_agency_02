@@ -63,7 +63,7 @@ export function Hero() {
 
         {/* Right — stats only, aligned to bottom */}
         <div className="flex flex-col justify-end">
-          <div className="grid grid-cols-3 pt-8 border-t border-black/10">
+          <div className="grid grid-cols-2 pt-8 border-t border-black/10">
             {data.hero.stats.map((stat, i) => (
               <div
                 key={stat.label}
