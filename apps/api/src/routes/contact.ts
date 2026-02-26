@@ -1,4 +1,4 @@
-import { Router, Request, Response } from 'express'
+import { Router, Request, Response, IRouter } from 'express'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { ContactFormPayload, ApiResponse } from '@forma/types'
@@ -7,7 +7,7 @@ import { validate } from '../middleware/validate.js'
 // ─── Supabase stub (uncomment when connected) ───────────────────────────────
 // import { supabase } from '../lib/supabase.js'
 
-export const contactRouter = Router()
+export const contactRouter: IRouter = Router()
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
