@@ -16,8 +16,8 @@
     "cta_secondary": "Start a project →",
     "tagline": "Brand strategy, digital design, and motion — for companies that refuse to blend in.",
     "stats": [
-      { "num": "60+", "label": "Projects" },
-      { "num": "8yr", "label": "Studio" }
+      { "num": "100+", "label": "Projects" },
+      { "num": "6yr", "label": "Studio" }
     ],
     "scroll": "Scroll"
   },
@@ -87,9 +87,8 @@
     "body_2": "Founded in 2019, we've partnered with startups and established brands alike, always with the same goal: design that works as hard as the people behind it.",
     "cta": "Work with us",
     "stats": [
-      { "num": "60+", "label": "Projects delivered" },
-      { "num": "12", "label": "Awards won" },
-      { "num": "8yr", "label": "Studio experience" },
+      { "num": "100+", "label": "Projects delivered" },
+      { "num": "6yr", "label": "Studio experience" },
       { "num": "100%", "label": "Client retention" }
     ],
     "process_label": "How we work",
@@ -146,16 +145,16 @@
     "subtext": "Tell us about your project and we'll respond within 24 hours with thoughts, not a template.",
     "info": [
       { "label": "Email", "value": "hello@brilo.ru", "href": "mailto:hello@brilo.ru" },
-      { "label": "Based in", "value": "London & Remote", "href": "" },
-      { "label": "Availability", "value": "Open — Q3 2025", "href": "" }
+      { "label": "Based in", "value": "Moscow & Remote", "href": "" },
+      { "label": "Availability", "value": "Open for work", "href": "" }
     ],
     "next_label": "What happens next",
     "next_steps": [
       "We review your brief & scope the project",
       "A 30-min intro call to align on vision",
-      "Tailored proposal within 3 business days"
+      "Tailored proposal within 5 business days"
     ],
-    "budgets": ["$10–25k", "$25–50k", "$50–100k", "$100k+"],
+    "budgets": ["$1–2K", "$2–5k", "$5–10k", "$10k+"],
     "form": {
       "name_label": "Your name",
       "name_placeholder": "Jane Smith",

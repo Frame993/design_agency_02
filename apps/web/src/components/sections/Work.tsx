@@ -1,5 +1,6 @@
 import { useReveal } from '../../hooks/useReveal'
 import { useT } from '../../i18n'
+import { BtnLink } from '../ui/Btn'
 
 // Visual-only data — not translatable
 const visuals = [
@@ -97,12 +98,7 @@ export function Work() {
           </h2>
         </div>
         <div className="hidden md:flex flex-col items-end gap-3">
-          <a
-            href="#"
-            className="inline-flex items-center px-8 py-3.5 text-sm font-semibold border-[1.5px] border-black rounded hover:bg-black hover:text-white transition-all"
-          >
-            {t('work.cta')}
-          </a>
+          <BtnLink href="#" variant="outline">{t('work.cta')}</BtnLink>
         </div>
       </div>
 

@@ -1,4 +1,5 @@
 import { useT } from "../../i18n";
+import { BtnLink } from "../ui/Btn";
 
 export function Hero() {
   const { t, data } = useT();
@@ -20,11 +21,10 @@ export function Hero() {
 
       {/* Body */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-end pt-16 md:pt-20 pb-8 relative">
-
         {/* Left — badge · headline · tagline · CTAs */}
         <div className="flex flex-col">
           <div className="inline-flex items-center gap-2 text-xs font-medium tracking-wide text-gray-600 mb-6 md:mb-8">
-            <span className="w-[7px] h-[7px] rounded-full bg-[#3ecf4c] animate-pulse-dot shrink-0" />
+            <span className="w-[7px] h-[7px] rounded-full bg-accent animate-pulse-dot shrink-0" />
             {t("hero.badge")}
           </div>
 
@@ -34,7 +34,9 @@ export function Hero() {
           >
             {t("hero.headline_1")}
             <br />
-            <em className="text-gray-600 italic">{t("hero.headline_em")}</em>{" "}
+            <em className="text-gray-600 italic">
+              {t("hero.headline_em")}
+            </em>{" "}
             &amp;
             <br />
             {t("hero.headline_3")}
@@ -45,16 +47,11 @@ export function Hero() {
             {t("hero.tagline")}
           </p>
 
-          <div className="flex items-center gap-4 flex-wrap">
-            <a
-              href="#work"
-              className="inline-flex items-center px-7 py-3.5 text-sm font-semibold bg-black text-white rounded hover:bg-gray-900 hover:-translate-y-0.5 hover:shadow-xl transition-all"
-            >
-              {t("hero.cta_primary")}
-            </a>
+          <div className="flex items-center gap-8 flex-wrap">
+            <BtnLink href="#work">{t("hero.cta_primary")}</BtnLink>
             <a
               href="#contact"
-              className="inline-flex items-center text-sm font-semibold text-black hover:opacity-60 transition-opacity"
+              className="text-sm font-semibold text-black hover:opacity-60 transition-opacity"
             >
               {t("hero.cta_secondary")}
             </a>
@@ -91,7 +88,9 @@ export function Hero() {
       >
         <div
           className="w-px h-16 animate-scroll-pulse"
-          style={{ background: "linear-gradient(to bottom, transparent, #9b9690)" }}
+          style={{
+            background: "linear-gradient(to bottom, transparent, #9b9690)",
+          }}
         />
         <span
           className="text-[0.65rem] tracking-[0.15em] uppercase text-gray-400"

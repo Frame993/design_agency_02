@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import type { ContactFormPayload, BudgetRange } from '@brilo/types'
 import { useT } from '../../i18n'
+import { Btn } from '../ui/Btn'
 
 type FormState = 'idle' | 'loading' | 'success' | 'error'
 
@@ -130,17 +131,14 @@ export function Contact() {
               <p className="text-sm text-red-600">{errorMsg}</p>
             )}
 
-            <button
+            <Btn
               type="submit"
               disabled={state === 'loading' || state === 'success'}
-              className={`w-full flex items-center justify-center px-8 py-3.5 text-sm font-semibold rounded transition-all mt-1 ${
-                state === 'success'
-                  ? 'bg-[#3ecf4c] text-white cursor-default'
-                  : 'bg-black text-white hover:bg-gray-900 hover:-translate-y-0.5 hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed'
-              }`}
+              className="w-full mt-1"
+              style={state === 'success' ? { background: '#3ecf4c', cursor: 'default' } : undefined}
             >
               {state === 'loading' ? form.submit_loading : state === 'success' ? form.submit_success : form.submit_idle}
-            </button>
+            </Btn>
           </form>
         </div>
       </div>
