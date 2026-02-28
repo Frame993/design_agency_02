@@ -66,17 +66,35 @@ export function About() {
         <span className="block text-xs font-semibold tracking-[0.12em] uppercase text-gray-600 mb-8">
           {t("about.process_label")}
         </span>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {data.about.steps.map((s, i) => (
             <div
               key={s.title}
-              className={`reveal group py-8 ${i > 0 ? "border-l border-black/10 pl-8 hover:border-black" : ""} transition-colors duration-300`}
+              className={`reveal group flex flex-col py-10 border-t border-black/10 ${
+                [
+                  // i=0 — left col at sm, first col at lg: no left border
+                  "sm:pr-6 lg:pr-8",
+                  // i=1 — right col at sm (border-l), 2nd col at lg (border-l)
+                  "sm:border-l sm:border-black/10 sm:pl-6 lg:pl-8 lg:pr-8",
+                  // i=2 — left col at sm (no border), 3rd col at lg (border-l)
+                  "sm:pr-6 lg:border-l lg:border-black/10 lg:pl-8 lg:pr-8",
+                  // i=3 — right col at sm (border-l), 4th col at lg (border-l)
+                  "sm:border-l sm:border-black/10 sm:pl-6 lg:pl-8",
+                ][i]
+              }`}
             >
-              <span className="block text-[0.7rem] font-bold tracking-[0.12em] text-gray-400 mb-4">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h4 className="text-[1.05rem] font-semibold mb-3">{s.title}</h4>
-              <p className="text-sm text-gray-600 leading-[1.75]">{s.desc}</p>
+              {/* Step number + expanding accent rule */}
+              <div className="flex items-center gap-3 mb-7">
+                <span className="text-[0.62rem] font-bold tracking-[0.2em] uppercase text-gray-400 group-hover:text-accent transition-colors duration-300">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="h-px w-5 bg-black/12 group-hover:w-8 group-hover:bg-accent transition-all duration-300" />
+              </div>
+
+              <h4 className="text-base font-semibold mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                {s.title}
+              </h4>
+              <p className="text-sm text-gray-600 leading-[1.8]">{s.desc}</p>
             </div>
           ))}
         </div>
