@@ -129,10 +129,10 @@ export function Nav() {
             {t('nav.cta')}
           </a>
           <a
-            href="mailto:hello@forma.studio"
+            href="mailto:hello@brilo.ru"
             className="text-xs text-center text-gray-400 hover:text-black transition-colors py-1"
           >
-            hello@forma.studio
+            hello@brilo.ru
           </a>
         </div>
       </div>

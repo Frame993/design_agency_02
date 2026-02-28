@@ -1,6 +1,6 @@
 {
   "nav": {
-    "brand": "FORMA",
+    "brand": "BRILO",
     "work": "Work",
     "services": "Services",
     "about": "About",
@@ -79,7 +79,7 @@
     ]
   },
   "about": {
-    "label": "About Forma",
+    "label": "About Brilo",
     "headline_1": "A small studio",
     "headline_2": "with outsized",
     "headline_3": "ambition.",
@@ -117,7 +117,7 @@
     "headline_1": "What our",
     "headline_2": "clients say.",
     "featured": {
-      "quote_before": "Forma didn't just redesign our brand — they helped us understand who we really are. The result was a",
+      "quote_before": "Brilo didn't just redesign our brand — they helped us understand who we really are. The result was a",
       "quote_em": "40% increase in qualified leads",
       "quote_after": "within three months of launch.",
       "initials": "SC",
@@ -128,7 +128,7 @@
     "items": [
       {
         "initials": "MR",
-        "quote": "\"Working with Forma felt like having a creative director embedded in our team. They challenged our assumptions and delivered something we couldn't have imagined alone.\"",
+        "quote": "\"Working with Brilo felt like having a creative director embedded in our team. They challenged our assumptions and delivered something we couldn't have imagined alone.\"",
         "name": "Marcus Reid",
         "role": "CMO, Lune Skincare"
       },
@@ -145,7 +145,7 @@
     "headline": "Let's build something extraordinary.",
     "subtext": "Tell us about your project and we'll respond within 24 hours with thoughts, not a template.",
     "info": [
-      { "label": "Email", "value": "hello@forma.studio", "href": "mailto:hello@forma.studio" },
+      { "label": "Email", "value": "hello@brilo.ru", "href": "mailto:hello@brilo.ru" },
       { "label": "Based in", "value": "London & Remote", "href": "" },
       { "label": "Availability", "value": "Open — Q3 2025", "href": "" }
     ],
@@ -172,7 +172,7 @@
     }
   },
   "footer": {
-    "brand": "FORMA",
+    "brand": "BRILO",
     "tagline": "Design that moves the world forward.",
     "columns": [
       {
@@ -194,12 +194,12 @@
       {
         "title": "Contact",
         "links": [
-          { "label": "hello@forma.studio", "href": "mailto:hello@forma.studio" },
+          { "label": "hello@brilo.ru", "href": "mailto:hello@brilo.ru" },
           { "label": "Start a project", "href": "#contact" }
         ]
       }
     ],
-    "copyright": "© 2025 Forma Studio. All rights reserved.",
+    "copyright": "© 2025 Brilo. All rights reserved.",
     "privacy": "Privacy Policy"
   }
 }

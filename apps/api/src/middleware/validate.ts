@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import { ZodSchema, ZodError } from 'zod'
-import { ApiResponse } from '@forma/types'
+import { ApiResponse } from '@brilo/types'
 
 export function validate(schema: ZodSchema) {
   return (req: Request, res: Response, next: NextFunction) => {

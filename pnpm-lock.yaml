@@ -14,7 +14,7 @@ importers:
 
   apps/api:
     dependencies:
-      '@forma/types':
+      '@brilo/types':
         specifier: workspace:*
         version: link:../../packages/types
       cors:
@@ -54,7 +54,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@forma/types':
+      '@brilo/types':
         specifier: workspace:*
         version: link:../../packages/types
       '@tailwindcss/vite':

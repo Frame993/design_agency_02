@@ -32,8 +32,8 @@ export default async (req: Request) => {
 
   try {
     await resend.emails.send({
-      from: process.env.FROM_EMAIL ?? 'Forma Studio <onboarding@resend.dev>',
-      to: process.env.TO_EMAIL ?? 'hello@forma.studio',
+      from: process.env.FROM_EMAIL ?? 'Brilo <onboarding@resend.dev>',
+      to: process.env.TO_EMAIL ?? 'hello@brilo.ru',
       replyTo: payload.email,
       subject: `New project enquiry from ${payload.name}${payload.company ? ` · ${payload.company}` : ''}`,
       html: buildEmailHtml(payload),
@@ -64,7 +64,7 @@ function buildEmailHtml(p: Payload): string {
 <head><meta charset="utf-8" /></head>
 <body style="font-family: system-ui, sans-serif; color: #1a1917; max-width: 600px; margin: 0 auto; padding: 32px 24px;">
   <div style="border-bottom: 2px solid #c8f23a; padding-bottom: 16px; margin-bottom: 24px;">
-    <span style="font-weight: 700; letter-spacing: 0.15em; font-size: 14px;">FORMA STUDIO</span>
+    <span style="font-weight: 700; letter-spacing: 0.15em; font-size: 14px;">BRILO</span>
   </div>
   <h2 style="margin: 0 0 24px; font-size: 20px;">New project enquiry</h2>
   <table style="width: 100%; border-collapse: collapse;">
@@ -84,7 +84,7 @@ function buildEmailHtml(p: Payload): string {
     </tr>
   </table>
   <div style="background: #f5f0e8; border-radius: 8px; padding: 20px; line-height: 1.7; white-space: pre-wrap;">${p.message}</div>
-  <p style="margin-top: 32px; font-size: 12px; color: #9b9690;">Sent via forma.studio contact form</p>
+  <p style="margin-top: 32px; font-size: 12px; color: #9b9690;">Sent via brilo.ru contact form</p>
 </body>
 </html>
   `.trim()

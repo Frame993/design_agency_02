@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import type { ContactFormPayload, BudgetRange } from '@forma/types'
+import type { ContactFormPayload, BudgetRange } from '@brilo/types'
 import { useT } from '../../i18n'
 
 type FormState = 'idle' | 'loading' | 'success' | 'error'
