@@ -154,7 +154,7 @@
       "A 30-min intro call to align on vision",
       "Tailored proposal within 5 business days"
     ],
-    "budgets": ["$1–2K", "$2–5k", "$5–10k", "$10k+"],
+    "budgets": ["$1–2k", "$2–5k", "$5–10k", "$10k+"],
     "form": {
       "name_label": "Your name",
       "name_placeholder": "Jane Smith",

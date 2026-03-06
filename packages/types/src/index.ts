@@ -1,4 +1,4 @@
-export type BudgetRange = '$10–25k' | '$25–50k' | '$50–100k' | '$100k+'
+export type BudgetRange = '$1–2k' | '$2–5k' | '$5–10k' | '$10k+'
 
 export interface ContactFormPayload {
   name: string

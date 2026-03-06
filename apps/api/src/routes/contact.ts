@@ -15,7 +15,7 @@ const contactSchema = z.object({
   name: z.string().min(1, 'Name is required').max(100),
   email: z.string().email('Invalid email address'),
   company: z.string().max(100).optional(),
-  budget: z.enum(['$10–25k', '$25–50k', '$50–100k', '$100k+']).optional(),
+  budget: z.enum(['$1–2k', '$2–5k', '$5–10k', '$10k+']).optional(),
   message: z.string().min(10, 'Message must be at least 10 characters').max(2000),
 })
 
